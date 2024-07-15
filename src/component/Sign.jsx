@@ -1,14 +1,26 @@
 import React from "react";
 import img_google from "../assets/img/googlee.png";
 
-function Form() {
+function Signin() {
+  function login(e) {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+
+      if (email === 'admin@mail.com' && password === '1234') {
+        window.alert(`berhasil masuk menggunakan email : ${email}`);
+      } else {
+        window.alert("email atau password salah!!");
+      }
+
+  }
   return (
     <div className="container-auth">
       <div className="header">
         <h1>Welcome Back</h1>
         <h4>Welcome Back! Please enter your details.</h4>
       </div>
-      <form>
+      <form onSubmit={login}>
         <div>
           <label htmlFor="email">Email</label>
           <input
@@ -20,7 +32,7 @@ function Form() {
         </div>
         <div>
           <label htmlFor="password">Password</label>
-          <input type="password" name="password" id="password" />
+          <input type="password" name="password" id="password" placeholder="Password" />
         </div>
         <div className="forget-password">
           <div>
@@ -38,4 +50,4 @@ function Form() {
   );
 }
 
-export default Form;
+export default Signin;

@@ -1,14 +1,14 @@
 import React from "react";
 import Counter from "./component/counter";
-// import Form from "./component/form";
 import Table from "./component/Table";
+import Signin from "./component/Sign";
 
 function App() {
   return (
     <div>
       {/* <Counter /> */}
-      {/* <Form/> */}
-      <Table />
+      <Signin/>
+      {/* <Table /> */}
     </div>
   );
 }
